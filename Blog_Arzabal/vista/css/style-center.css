@@ -1,0 +1,134 @@
+#wrap #body-center-blog
+{
+    max-width: 1268px;
+    margin: 0 auto;
+    margin-top: 10px;
+    overflow: hidden;
+    margin-bottom: 13px;
+}
+
+#wrap .body-center-blog
+{
+    background-color: rgb(215, 229, 239);
+}
+
+#wrap #body-center-blog #blog-left
+{
+    float: left;
+    
+    overflow: auto;
+    width: 71%;
+    margin-left: 11px;
+}
+
+#wrap #body-center-blog #blog-left #center-post
+{
+    /* width: 82%; */
+    padding: 10px 10px 10px 10px;
+    background-color: white;
+    border: 1px solid  #C5C5C5;
+    position: relative;
+    margin-bottom: 8px;
+    margin-right: 0;
+    display: block;
+}
+
+
+#center-post #post-title h3
+{
+    margin-top: 1px;
+    margin-bottom: 1px;
+   
+}
+#center-post #post-title h3 a
+{
+    text-decoration: none;
+     
+}
+#post-title, #post-content a.edit{
+    color: #02A7C1 !important;
+    font-size: 13px;
+    font-family: sans-serif;
+    cursor: pointer;
+}
+
+#center-post #post-title h3 a:link ,a:visited,a:hover{
+    color:black !important;
+}
+#center-post #post-title
+{
+    margin: 0 auto;
+    width: 100%;
+}
+
+#center-post #post-content p
+{
+    margin-top: 7px;
+    
+}
+#center-post #post-info
+{ 
+    position: absolute;
+    bottom: 4px; 
+    left: 10px;    
+    font-size: 11px;
+    border-top: 1px solid black;
+    width: 97%;
+}
+#center-post #post-info p{
+    margin: 0;
+}
+
+#wrap #body-center-blog #blog-right
+{
+    float: right;    
+    width: 303px;
+    overflow: auto;
+    margin-right: 11px;
+}
+#wrap #body-center-blog #blog-right #modules-right #content-modules form{
+    padding: 14px;
+}
+#wrap #body-center-blog #blog-right #modules-right
+{
+    margin: 0px 2px 9px 10px;
+    border: 1px solid #C5C5C5;
+}
+#wrap #body-center-blog #blog-right #modules-right #title-modules
+{
+    background-color: #8F9DDD;
+    text-align: center;
+    padding-top: 7px;
+    padding-bottom: 7px;
+    display: block;
+    color: white;
+}
+#wrap #body-center-blog #blog-right #modules-right #title-modules h4
+{
+    margin: 0;
+}
+#wrap #body-center-blog #blog-right #modules-right #content-modules p
+{
+    margin: 0;
+    padding: 9px;
+}
+#wrap #body-center-blog #blog-right #modules-right #content-modules
+{
+    background-color: rgb(255, 255, 255);
+}
+#blog-left #center-post #post-content .read-more{
+    background-color: cadetblue;
+    width: 7%;
+    padding: 4px;
+    border-radius: 2px;
+    text-align: center;
+    box-shadow: 0px 1px 1px 0px;
+}
+#blog-left #center-post #post-content .read-more a{
+   color:white !important;
+   font-size: 13px;
+}
+#blog-left #center-post #post-content .imagen-post
+{
+    margin-top: 5px;
+}

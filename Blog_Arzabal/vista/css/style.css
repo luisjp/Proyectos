@@ -1,0 +1,157 @@
+html, body , a:link{
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    text-decoration:none;   
+    font-family: sans-serif;
+    
+}
+
+#wrap
+{
+    width: 100%;
+    margin: 0 auto;
+    background-color: rgb(215, 229, 239);
+    position: absolute;
+    min-height: 100%;
+}
+#wrap #banner
+{
+    margin: 0 auto;
+    padding: 0px;	
+    text-align: center;
+    width: 100%;
+}
+#wrap #nav
+{
+    width: 100%;
+    margin: 0 auto;
+    padding: 0;	
+    background-color: #8F9DDD;
+    box-shadow: 0px 2px 4px -1px;
+}
+#wrap #nav #nav-left
+{
+    margin-left: 67px;	
+    display: inline-block;
+
+    padding-top: 5px;
+}
+#wrap #nav #nav-left nav
+{
+    margin: 0;
+    padding: 0;
+}
+#wrap #nav #nav-left nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 8px 0px 8px 0px;
+    overflow: hidden;
+}
+#wrap #nav #nav-left nav ul li:hover {
+    background-color: #5972F2;
+    border-radius: 5px;
+    cursor: pointer;
+}
+#wrap #nav #nav-left nav ul li {
+    display: inline;
+    padding: 10px 20px 10px 20px;
+    border-radius: 10px;
+    color: white;
+    transition:all 0.3s ease-in-out;
+}
+#wrap #nav #nav-left nav ul li a{
+    text-decoration: none;
+}
+#wrap #nav #nav-right
+{
+    float: right;
+    margin-right: 84px;
+    margin-top: 4px;    
+    margin-bottom: 1px;
+}
+
+#wrap #nav #nav-right #nav-login
+{
+    background-color: rgb(96, 108, 182);
+    text-align: right;
+    border-radius: 2px;
+    display: inline-block;
+}
+
+#wrap #nav #nav-right #nav-login input
+{
+    position: relative;
+    top: 2px;    
+    right: 2px;
+}
+
+#wrap #nav #nav-right #nav-login #nav-login-img
+{
+    float : right;
+    margin-left: 7px;
+}
+
+#wrap #nav #nav-right #nav-login #nav-login-form
+{
+    float : left;
+    margin-left: 6px;
+}
+
+#wrap #nav #nav-right #nav-login #nav-login-form label
+{
+    margin: 18px;
+    position: relative;
+    top: 8px;
+    right: 11px;
+    color: white;
+    font-family: inherit;
+}
+
+#wrap #nav #nav-right #nav-login #nav-login-form input
+{
+    margin-top: 2px !important;
+    margin-left: 3px !important;
+    border-radius: 2px !important;
+    width: 105px;
+    height: 21px;
+    font-size: 14px;
+}
+
+
+#wrap #nav #nav-right #nav-login #nav-login-form input[type="text"],input[type="password"]
+{
+    padding-left: 5px;
+    font-family:'Open Sans',sans-serif !important;
+    border: 1px solid #5972F2;
+    
+}
+#wrap #name-login{
+    width: 100%;
+    margin: 0 auto;
+    padding: 0;
+    margin-top: 10px;
+}
+#wrap #name-login #name p{ margin: 1px; font-size: 13px; font-family: sans-serif; color: white;}
+#wrap #name-login #name{
+    border-top: 1px solid rgb(141, 159, 255);
+    margin: 0 auto;
+    background-color: rgb(96, 108, 182);
+    text-align: center;
+    border-bottom: 1px solid rgb(141, 159, 255);
+}
+#wrap #name-login #name p a,a:link, a:visited, a:hover
+{
+    color: rgb(133, 255, 244) !important;
+}
+
+#wrap .banner
+{
+	background-color: rgb(96, 108, 182);	
+}
+
+#wrap .banner p{
+	color: white;
+	margin: 0;
+	font-family: monospace;
+}
