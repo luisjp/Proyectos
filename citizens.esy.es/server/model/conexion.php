@@ -2,9 +2,9 @@
 	class conexion
 	{
 		var $servername = "mysql.hostinger.es";
-		var $username = "u344175135_citiz";
-		var $password = "caramelo2015";
-		var $database = "u344175135_citiz";
+		var $username = "root";
+		var $password = "";
+		var $database = "database";
 		var $conn;
 
 		public function __construct()
