@@ -1,0 +1,92 @@
+@font-face {
+    font-family: fonth1banner;
+    src: url("../fonts/Asimov.otf");
+}
+
+.marcador
+{
+  font-size: 24px;
+  font-family: Arial;
+  background-color: cadetblue;
+  margin-bottom: 15px;
+  padding-bottom: 5px;
+  padding-top: 5px;
+  text-align: center;
+}
+
+.container > .row div h1
+{
+   font-family: fonth1banner;
+   font-size: 66px;
+}
+
+.container > .navbar
+{
+  border: 0px solid;  
+}
+.container > .navbar .nav-header
+{
+  background-color : #E89900; 
+}
+.container > .row  .back-title-style
+{
+    color: rgb(245, 244, 82);
+    background-color: rgba(224, 81, 0, 0.68);
+    border-radius: 10px 10px 10px 10px;
+    padding: 0px 12px 0px 12px;
+    box-shadow: 3px 4px 11px 0px #F5EF52;
+}
+.navbar-default .navbar-nav > li > a:hover,
+.navbar-default .navbar-nav > li > a:focus {
+  color: #E83C00;
+  background-color: transparent;
+}
+.container > .bannerStyle
+{
+    background: url(../img/background-banner.png);
+    z-index: -1;  
+}
+.container > .info-game-now
+{
+  background-color: white;  
+      width: 100%;
+    margin: 0 auto;
+}
+.container > .row .title-info-game-now
+{
+    background-color: #BD6611;
+    color: white;
+    font-size: 20px;
+    padding: 4px 0 4px 0; 
+}
+.container > .row div h1 a
+{
+  color: #F5EF52;
+
+} 
+.img-circle-my
+{
+    border-radius: 50%;
+    width: 17%;
+    float: left;
+    background-color: black;
+    color: white;
+    text-align: center;
+    border: 3px solid white;
+    margin: 0;
+    margin-right: 8px;
+}
+[class="col-md-6 marcador"] {
+      width: 158px;
+      color: #FFF;
+      border-top-left-radius: 4px;
+      border-bottom-left-radius: 4px;
+}
+.navbar-default .navbar-nav > li > a {
+    color: #FEFEFE;
+}
+.col-md-4 .players-numbers
+{
+    line-height: 30px;
+    margin: 0;
+}
