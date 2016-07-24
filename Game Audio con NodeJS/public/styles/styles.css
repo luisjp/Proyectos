@@ -1,0 +1,251 @@
+
+html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+}
+#container {
+    height: auto !important;
+    min-height: 92.9%;
+    position: relative;
+}
+#container .header {
+    background-color: #000000;
+}
+#container .cos {
+    background-color: #B0E0E6;
+}
+#container #cos {
+    height: 100%;
+    width: 100%;
+    z-index: -1;
+    
+}
+#container #header {
+    height: 50px;
+}
+#users .user{
+    background-color: black;
+    
+    border: 1px solid white;
+}
+#container #header #users{
+     display: inline-block;
+    
+     margin: 0 auto 0 51px;
+    padding-top: 13px;
+    
+     width: 83px;
+    float: left;   
+     color: white;
+     text-align: center;
+}
+#container #header #logo {
+    display: inline-block;
+    margin: 0 auto 0 115px;
+    padding-top: 13px;
+    width: 138px;
+    float: left;
+}
+#container #header #tema {
+    display: inline-block;  
+    margin: 0 auto 0 217px;  padding-top: 13px;  width: 83px;  
+    float: left;  color: white;  text-align: center;
+
+}
+#container #header #menu {
+    float: right;
+    margin: 0 86px 0 0;
+    padding-top: 9px;
+    position: inherit;
+    width: auto;
+}
+#menu .gain {
+    border: 1px solid;
+    color: #FFFFFF;
+    cursor: pointer;
+    font-family: monospace;
+    padding: 3px 9px;
+    z-index: 9999;
+}
+#menu .mGain {
+    background: none repeat scroll 0 0 rgba(0, 0, 0, 0.6);
+    border-style: ridge;
+    box-shadow: 0 1px 1px 0;
+    display: none;
+}
+#menu .mGain #Cgain {
+    -moz-box-orient: vertical;
+    -webkit-appearance: slider-vertical;
+    width: 58px;
+}
+#container #cos #instruments #drums{
+    
+    width: 900px;
+    height: 150px;
+    padding-bottom: 17px;
+    margin: 0 auto;
+}
+#container #cos #instruments #hits{
+    
+    width: 900px;
+    height: 150px;
+    padding-bottom: 17px;
+    margin: 0 auto;
+}
+#container #cos #instruments #guitar{
+    
+    width: 900px;
+    height: 150px;
+    padding-bottom: 17px;
+    margin: 0 auto;
+}
+#container #cos #instruments #piano{
+    
+    width: 900px;
+    height: 150px;
+    padding-bottom: 17px;
+    margin: 0 auto;
+}
+#container #cos #instruments #drums .image img{
+    cursor: pointer;
+}
+#container #cos #instruments #drums .image{
+    float: left;
+}
+#container #cos #instruments #hits .image img{
+    cursor: pointer;
+}
+#container #cos #instruments #hits .image{
+    float: left;
+}
+#container #cos #instruments #guitar .image img{
+    cursor: pointer;
+}
+#container #cos #instruments #guitar .image{
+    float: left;
+}
+#container #cos #instruments #piano .image img{
+    cursor: pointer;
+}
+#container #cos #instruments #piano .image{
+    float: left;
+}
+
+#container #cos #instruments #drums #controlDrums #filters #freqRange{
+    width: 220px;
+}
+#container #cos #instruments #drums #controlDrums #filters #qualRange{
+    width: 220px;
+}
+#container #cos #instruments #drums #controlDrums #filters #frequencia input[type="radio"], input[type="checkbox"] {
+    margin: 0;
+}
+#container #cos #instruments #drums #controlDrums #filters {
+    width: 100px;
+}
+#container #cos #instruments #drums #controlDrums #filters div{
+    padding: 10px;
+}
+
+#container #cos #instruments #hits #controlHits #filters #freqRange{
+    width: 220px;
+}
+#container #cos #instruments #hits #controlHits #filters #qualRange{
+    width: 220px;
+}
+#container #cos #instruments #hits #controlHits #filters #frequencia input[type="radio"], input[type="checkbox"] {
+    margin: 0;
+}
+#container #cos #instruments #hits #controlHits #filters {
+    width: 100px;
+}
+#container #cos #instruments #hits #controlHits #filters div{
+    padding: 10px;
+}
+
+#container #cos #instruments #guitar #controlGuitar #filters #freqRange{
+    width: 220px;
+}
+#container #cos #instruments #guitar #controlGuitar #filters #qualRange{
+    width: 220px;
+}
+#container #cos #instruments #guitar #controlGuitar #filters #frequencia input[type="radio"], input[type="checkbox"] {
+    margin: 0;
+}
+#container #cos #instruments #guitar #controlGuitar #filters {
+    width: 100px;
+}
+#container #cos #instruments #guitar #controlGuitar #filters div{
+    padding: 10px;
+}
+
+#container #cos #instruments #piano #controlPiano #filters #freqRange{
+    width: 220px;
+}
+#container #cos #instruments #piano #controlPiano #filters #qualRange{
+    width: 220px;
+}
+#container #cos #instruments #piano #controlPiano #filters #frequencia input[type="radio"], input[type="checkbox"] {
+    margin: 0;
+}
+#container #cos #instruments #piano #controlPiano #filters {
+    width: 100px;
+}
+#container #cos #instruments #piano #controlPiano #filters div{
+    padding: 10px;
+}
+
+#container #cos #instruments{
+    padding: 22px 22px;
+}
+#container #cos #instruments .control{
+    background-color: rgb(108, 161, 255);
+    width: 100px;
+}
+#container #cos #instruments #controlDrums{
+    float: right;
+
+    width: 500px;
+}
+#container #cos #instruments #controlHits{
+    float: right;
+
+    width: 500px;
+}
+#container #cos #instruments #controlGuitar{
+    float: right;
+
+    width: 500px;
+}
+#container #cos #instruments #controlPiano{
+    float: right;
+
+    width: 500px;
+}
+#container #footer{
+    clear: both;
+    position: absolute;
+    width: 100%;
+}
+#container .footer{
+    background-color: black;
+}
+#footer #tempo{
+    width: 208px;
+ 
+    margin: 0 auto;
+    
+    height: 100%;
+}
+#footer #tempo #imgTempo{
+    float: left;
+    cursor: pointer;
+    
+}
+#footer #tempo #rangeTempo{
+    float: right;
+    
+    padding-top: 13px;
+}

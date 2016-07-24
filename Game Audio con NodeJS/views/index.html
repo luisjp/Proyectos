@@ -1,0 +1,151 @@
+<!doctype html>
+<html lang="es">
+<head>
+	<script type="text/javascript" src="../js/jquery-2.0.3.min.js"></script>
+	<script type="text/javascript" src="../js/buffer-loader.js"></script>
+	<script type="text/javascript" src="../js/init.js"></script>
+	<script type="text/javascript" src="../js/cargaSound.js"></script>
+	<script type="text/javascript" src="../js/script.js"></script>
+	<link rel="stylesheet" type="text/css" href="../styles/styles.css" />
+	<meta http-equiv="X-UA-Compatible" content="chrome=1" />
+	<meta charset="UTF-8">
+	<title>Toca Toca !</title>
+</head>
+<body>
+	<div id="container">
+		<div class="header" id="header">
+			<div id="logo">
+				<img src="../img/tocamusic.png"></img>
+			</div>
+			<div id="menu">
+				<div class="gain" id="gain">Master</div>
+				<div id="mGain" class="mGain"><center><input id="Cgain" type="range" value="100" max="100" min="0"  orient="vertical" />
+				</center></div>
+			</div>
+		</div>
+		
+		<div class="cos" id="cos">
+			<div id="instruments">
+				<div id="drums">
+					<div class="image" id="drumsBt">
+						<img src="../img/Drums.png" width="200" height="120"  onmouseover="this.src='../img/Drums-Hover.png'" onmouseout="this.src='../img/Drums.png'"/>
+					</div>
+					<div class="control" id="controlDrums">
+						<div id="filters">
+							
+							<div id="frequencia">
+								<span>Filtro : </span>
+								<input type="checkbox" />
+								<span>Delay: </span>
+								<input type="checkbox" id="delay" />								
+							</div>
+							
+							<div id="freqRange">
+								<span>Frequencia : </span>
+								<input type="range" id="elFreqDrums" min="0" max="1" step="0.01" />
+							</div>
+
+							<div id="qualRange">
+								<span>Calidad : </span>
+								<input type="range" id="elQualDrums" min="0" max="1" step="0.01" />
+							</div>							
+						</div>
+					</div>
+
+				</div>
+				<div id="hits">
+					<div class="image" id="hitsBt">
+						<img src="img/Hits.png" width="200" height="120"  onmouseover="this.src='../img/Hits-Hover.png'" onmouseout="this.src='../img/Hits.png'"/>
+					</div>
+					<div class="control" id="controlHits">
+						<div id="filters">
+							
+							<div id="frequencia">
+								<span>Filtro : </span>
+								<input type="checkbox" />
+								<span>Delay: </span>
+								<input type="checkbox" id="delay" />								
+							</div>
+							
+							<div id="freqRange">
+								<span>Frequencia : </span>
+								<input type="range" id="elFreqH" min="0" max="1" step="0.01" />
+							</div>
+
+							<div id="qualRange">
+								<span>Calidad : </span>
+								<input type="range" id="elQualH" min="0" max="1" step="0.01" />
+							</div>							
+						</div>
+					</div>
+
+				</div>
+				<div id="guitar">
+					<div class="image" id="guitarBt">
+						<img src="img/guitar.png" width="160" height="120"  onmouseover="this.src='../img/guitar-Hover.png'" onmouseout="this.src='../img/guitar.png'"/>
+					</div>
+					<div class="control" id="controlGuitar">
+						<div id="filters">
+							
+							<div id="frequencia">
+								<span>Filtro : </span>
+								<input type="checkbox" />
+								<span>Delay: </span>
+								<input type="checkbox" id="delay" />								
+							</div>
+							
+							<div id="freqRange">
+								<span>Frequencia : </span>
+								<input type="range" id="elFreqG" min="0" max="1" step="0.01" />
+							</div>
+
+							<div id="qualRange">
+								<span>Calidad : </span>
+								<input type="range" id="elQualG" min="0" max="1" step="0.01" />
+							</div>							
+						</div>
+					</div>
+				</div>
+				<div id="piano">
+					<div class="image" id="pianoBt">
+						<img src="../img/piano.png" width="160" height="120"  onmouseover="this.src='../img/piano-Hover.png'" onmouseout="this.src='../img/piano.png'"/>
+					</div>
+					<div class="control" id="controlPiano">
+						<div id="filters">
+							
+							<div id="frequencia">
+								<span>Filtro : </span>
+								<input type="checkbox" />
+								<span>Delay: </span>
+								<input type="checkbox" id="delay" />
+							</div>
+							
+							<div id="freqRange">
+								<span>Frequencia : </span>
+								<input type="range" id="elFreqP" min="0" max="1" step="0.01" />
+							</div>
+
+							<div id="qualRange">
+								<span>Calidad : </span>
+								<input type="range" id="elQualP" min="0" max="1" step="0.01" />
+							</div>							
+						</div>
+					</div>
+				</div>
+			</div>
+			
+		</div>
+		<div class="footer" id="footer">
+			<div id="tempo" class="tempo">
+				<div id="imgTempo">
+					<img id="imgMetro" src="../img/metro.png" width=50 height=50 />
+				</div>
+				<div id="rangeTempo">
+					<input type="range" id="Tempo" value="0.3" max="0.3" min="0.1" step="0.1" orient="horizontal">
+				</div>
+			</div>
+		</div>
+	</div>
+	
+</body>
+</html> 
