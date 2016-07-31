@@ -1,0 +1,120 @@
+
+body {
+    background-color: threedface;
+}
+table {
+    margin: 16px auto 0;
+    text-align: center;
+    width: 71%;
+}
+table tr td {
+    cursor: pointer;
+    height: 43px;
+    transition: font-color 0.2s ease-in-out 0s;
+    width: 43px;
+}
+@font-face {
+    font-family: "Rubber";
+    src: url("Rubber.ttf");
+}
+#container {
+    margin: 0 auto;
+    width: 819px;
+}
+.container {
+    background-color: #D0F5A9;
+    border-top: 12px solid #596A72;
+    box-shadow: 5px 4px 4px -1px;
+}
+#container #titulo {
+    margin: 0 auto;
+    padding-top: 18px;
+    width: 368px;
+}
+#container .titulo {
+    color: #0058AF;
+    font-family: Rubber;
+    font-size: 32px;
+}
+.select{
+    background-color: rgb(115, 253, 242);
+    transition: background-color 0.2s ease-in-out 0s;
+}
+.msgComplete{
+
+    background-color: rgb(53, 196, 51);
+    bottom: 50%;
+    color: #FFFFFF;
+    font-size: 50pt;
+    left: 27%;
+    padding: 76px;
+    position: absolute;
+
+}
+.msg{
+
+    background-color: rgba(53, 196, 51, 0.6);
+    bottom: 50%;
+    color: #FFFFFF;
+    font-size: 50pt;
+    left: 39%;
+    padding: 76px;
+    position: absolute;
+
+}
+#container #contador {
+    background-color: #F4FF9B;
+    border-radius: 0 14px 14px 0;
+    box-shadow: 1px 1px 1px;
+    font-size: 50px;
+    left: 0;
+    padding: 0 14px 0 32px;
+    position: fixed;
+    top: 8px;
+}
+#container #contador #cont {
+    margin: 0 auto;
+    padding-top: 10px;
+}
+#fontletra{
+    color: blue;
+}
+#puntuar p {
+    float: left;
+    margin: 0;
+}
+#puntuar {
+    float: right;
+    margin-right: 132px;
+    width: 18%;
+}
+#puntuacion {
+}
+.entrada {
+    margin: 0 auto;
+    text-align: center;
+    width: 278px;
+    padding-top: 12px;
+}
+#lista-palabras {
+    width: 300px;
+}
+#lista-palabras li {
+    
+}
+.container .imagen{
+    width: 100%;
+    height: 155px;
+    background-image: url("img/fondo.jpg");
+}
+#container .separador {
+    background: linear-gradient(45deg, #CEDCE7 0%, #596A72 100%) repeat scroll 0 0 rgba(0, 0, 0, 0);
+    box-shadow: 1px 3px 1px -1px;
+    height: 11px;
+    width: 100%;
+}
+#container #content #Resultados {
+    margin-left: 115px;
+    padding-bottom: 15px;
+    margin-top: 18px;
+}
