@@ -1,0 +1,144 @@
+<html><head>
+    <meta charset="utf-8">
+    <title>Vizuly - Radial Progress</title>
+
+    <!-- Test container style sheets -->
+    <link rel="stylesheet" href="styles/examples.css">
+
+    <!-- Vizuly specific style sheets -->
+    <link rel="stylesheet" href="../lib/styles/vizuly.css">
+    <link rel="stylesheet" href="../lib/styles/vizuly_radial_progress.css">
+
+    <!-- Supporting test container files:  Vizuly does NOT rely on these -->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="../lib/styles/cssmenu.css">
+    <script type="text/javascript" src="../lib/jquery-2.1.1.min.js"></script>
+    <script src="../lib/cssmenu.js"></script>
+
+    <!-- D3.js ... of course! -->
+    <script src="d3/d3.v3.min.js"></script>
+
+    <!-- debug source scripts: start --> <!--
+    <script src="../src/namespace/namespace.js"></script>
+    <script src="../src/viz/_viz.js"></script>
+
+    <script src="../src/theme/_theme.js"></script>
+    <script src="../src/theme/radialprogress.js"></script>
+
+    <script src="../src/core/component.js"></script>
+    <script src="../src/core/util.js"></script>
+    <script src="../src/core/color.js"></script>
+    <script src="../src/core/format.js"></script>
+    <script src="../src/svg/_svg.js"></script>
+    <script src="../src/svg/gradient.js"></script>
+    <script src="../src/svg/filter.js"></script>
+    <script src="../src/viz/radialprogress.js"></script>
+
+    --> <!-- debug source scripts: end -->
+
+    <!-- store.js -->
+
+    <script src="lib/vizuly_site.min.js"></script>
+    <script src="lib/theme_showreel.js"></script>
+
+</head>
+
+<body>
+
+<div id="cssmenu"><div id="menu-button"><img src="../lib/styles/img/logo_16x16.png" class="logo">VIZULY RADIAL PROGRESS</div>
+    <ul class="main-menu">
+        <li class="active has-sub"><span class="submenu-button"></span>
+            <a><span>Display</span><br><span class="setting">1082px - 600px</span></a>
+            <ul class="options" callback="changeSize">
+                <li id="currentDisplay" class="selected" item_value="1082,600"><a>1082px - 600px</a></li>
+                <li item_value="1000,1000"><a>1000px - 1000px</a></li>
+                <li item_value="800,600"><a>800px - 600px</a></li>
+                <li item_value="375,667"><a>375px - 667px</a></li>
+                <li item_value="320,568"><a>320px - 568px</a></li>
+            </ul>
+        </li>
+        <li class="active has-sub"><span class="submenu-button"></span><a><span>Theme </span><br><span class="setting">Business</span></a>
+            <ul class="options" callback="changeSkin">
+                <li item_value="Fire"><a>Fire</a></li>
+                <li item_value="Business" class="selected"><a>Business</a></li>
+                <li item_value="White"><a>White</a></li>
+                <li item_value="Neon"><a>Neon</a></li>
+                <li item_value="Alert"><a>Alert</a></li>
+            </ul>
+        </li>
+        <li class="active has-sub"><span class="submenu-button"></span><a><span>End&nbsp;Cap </span><br><span class="setting">Rounded</span></a>
+            <ul class="options" callback="changeEndCap">
+                <li item_value="0"><a>Square</a></li>
+                <li class="selected" item_value="1"><a>Rounded</a></li>
+            </ul>
+        </li>
+        <li class="active has-sub"><span class="submenu-button"></span><a><span class="label">Value </span><br><span class="setting">150</span></a>
+          <ul class="options" callback="changeData">
+                <li item_value="20"><a>20</a></li>
+                <li item_value="60"><a>60</a></li>
+                <li item_value="80"><a>80</a></li>
+                <li item_value="150" class="selected"><a>150</a></li>
+                <li item_value="250"><a>250</a></li>
+                <li item_value="350"><a>350</a></li>
+            </ul>
+        </li>
+    </ul>
+</div>
+
+<!-- Our main content container-->
+<div class="container" style="width:100%">
+    <div id="viz_container" class="z-depth-3" style="width: 1082px; height: 600px;">
+        <div id="div1" class="radial_container" style="width: 288.533px; margin-left: 54.1px;"><div id="div_vz702d3bf5" class="vz-skin-business" style="width: 100%; height: 100%;"><svg id="vz702d3bf5" class="vizuly" width="288.53333333333336" height="288.53333333333336" style="overflow: visible;"><defs></defs><rect class="vz-background" width="288.53333333333336" height="288.53333333333336"></rect><g class="vz-radial_progress-viz"><g class="vz-radial_progress-plot" transform="translate(23,29)" style="width: 245.533px; height: 239.533px;"><rect class="vz-plot-background"></rect><g class="vz-radial_progress-arc-plot" transform="translate(122.76666666666668,119.76666666666668)"><circle class="vz-radial_progress-back-circle" r="131.15151515151516"></circle><path class="vz-radial_progress-track" d="M-115.6113479348794,42.07908939168941A7.869090909090907,7.869090909090907 0 0,1 -125.85397397388235,36.89847099162043A131.15151515151516,131.15151515151516 0 1,1 125.85397397388233,36.898470991620464A7.869090909090907,7.869090909090907 0 0,1 115.6113479348794,42.079089391689436L115.6113479348794,42.079089391689436A7.869090909090907,7.869090909090907 0 0,1 110.75149709701647,32.47065447262601A115.41333333333334,115.41333333333334 0 1,0 -110.75149709701647,32.47065447262598A7.869090909090907,7.869090909090907 0 0,1 -115.6113479348794,42.07908939168941Z" style="fill: rgb(221, 221, 221);"></path><path class="vz-radial_progress-arc" d="M-115.6113479348794,42.07908939168941A7.869090909090907,7.869090909090907 0 0,1 -125.85397397388235,36.89847099162043A131.15151515151516,131.15151515151516 0 0,1 116.163604241666,-60.88297772057231A7.869090909090907,7.869090909090907 0 0,1 112.39443560758797,-50.041226801561294L112.39443560758797,-50.041226801561294A7.869090909090907,7.869090909090907 0 0,1 102.22397173266609,-53.57702039410364A115.41333333333334,115.41333333333334 0 0,0 -110.75149709701647,32.47065447262598A7.869090909090907,7.869090909090907 0 0,1 -115.6113479348794,42.07908939168941Z" style="fill: rgb(31, 119, 180); fill-opacity: 1; stroke: rgb(31, 119, 180);"></path></g><g class="vz-radial_progress-label-plot"><text class="vz-radial_progress-label" x="122.76666666666668" y="119.76666666666668" style="text-anchor: middle; fill: rgb(238, 238, 238); stroke-opacity: 0; font-size: 32.7879px;">80</text></g></g></g></svg></div></div>
+        <div id="div2" class="radial_container" style="width: 288.533px; margin-left: 54.1px;"><div id="div_vz6e9d9dd5" class="vz-skin-business" style="width: 100%; height: 100%;"><svg id="vz6e9d9dd5" class="vizuly" width="288.53333333333336" height="288.53333333333336" style="overflow: visible;"><defs></defs><rect class="vz-background" width="288.53333333333336" height="288.53333333333336"></rect><g class="vz-radial_progress-viz"><g class="vz-radial_progress-plot" transform="translate(23,29)" style="width: 245.533px; height: 239.533px;"><rect class="vz-plot-background"></rect><g class="vz-radial_progress-arc-plot" transform="translate(122.76666666666668,119.76666666666668)"><circle class="vz-radial_progress-back-circle" r="131.15151515151516"></circle><path class="vz-radial_progress-track" d="M-63.23897044481447,109.5331098287651A4.590303030303031,4.590303030303031 0 0,1 -69.65211345090734,111.1274179415685A131.15151515151516,131.15151515151516 0 1,1 69.65211345090727,111.12741794156857A4.590303030303031,4.590303030303031 0 0,1 63.2389704448144,109.53310982876518L63.2389704448144,109.53310982876518A4.590303030303031,4.590303030303031 0 0,1 64.77646550934377,103.34849868565877A121.97090909090909,121.97090909090909 0 1,0 -64.77646550934382,103.3484986856587A4.590303030303031,4.590303030303031 0 0,1 -63.23897044481447,109.5331098287651Z" style="fill: rgb(221, 221, 221);"></path><path class="vz-radial_progress-arc" d="M-63.23897044481447,109.5331098287651A4.590303030303031,4.590303030303031 0 0,1 -69.65211345090734,111.1274179415685A131.15151515151516,131.15151515151516 0 1,1 131.0652237198226,-4.756790704977267A4.590303030303031,4.590303030303031 0 0,1 126.47794088962881,-3.197442310920451e-14L126.47794088962881,-3.197442310920451e-14A4.590303030303031,4.590303030303031 0 0,1 121.89065805943503,-4.423815355628858A121.97090909090909,121.97090909090909 0 1,0 -64.77646550934382,103.3484986856587A4.590303030303031,4.590303030303031 0 0,1 -63.23897044481447,109.5331098287651Z" style="fill: rgb(31, 119, 180); fill-opacity: 1; stroke: rgb(31, 119, 180);"></path></g><g class="vz-radial_progress-label-plot"><text class="vz-radial_progress-label" x="122.76666666666668" y="119.76666666666668" style="text-anchor: middle; fill: rgb(238, 238, 238); stroke-opacity: 0; font-size: 32.7879px;">$80.00</text></g></g></g></svg></div></div>
+        <div id="div3" class="radial_container" style="width: 288.533px; margin-left: 54.1px;"><div id="div_vz111eb01b" class="vz-skin-business" style="width: 100%; height: 100%;"><svg id="vz111eb01b" class="vizuly" width="288.53333333333336" height="288.53333333333336" style="overflow: visible;"><defs></defs><rect class="vz-background" width="288.53333333333336" height="288.53333333333336"></rect><g class="vz-radial_progress-viz"><g class="vz-radial_progress-plot" transform="translate(23,29)" style="width: 245.533px; height: 239.533px;"><rect class="vz-plot-background"></rect><g class="vz-radial_progress-arc-plot" transform="translate(122.76666666666668,119.76666666666668)"><circle class="vz-radial_progress-back-circle" r="131.15151515151516"></circle><path class="vz-radial_progress-track" d="M0,131.15151515151516A131.15151515151516,131.15151515151516 0 1,1 0,-131.15151515151516A131.15151515151516,131.15151515151516 0 1,1 0,131.15151515151516M0,125.90545454545455A125.90545454545455,125.90545454545455 0 1,0 0,-125.90545454545455A125.90545454545455,125.90545454545455 0 1,0 0,125.90545454545455Z" style="fill: rgb(221, 221, 221);"></path><path class="vz-radial_progress-arc" d="M7.993605777301127e-15,128.50171644564358A2.623030303030303,2.623030303030303 0 0,1 -2.676561533704383,131.12420045473834A131.15151515151516,131.15151515151516 0 1,1 125.5336282868758,37.97404502644684A2.623030303030303,2.623030303030303 0 0,1 122.21239478074145,39.709214188054524L122.21239478074145,39.709214188054524A2.623030303030303,2.623030303030303 0 0,1 120.51228315540075,36.45508322538897A125.90545454545455,125.90545454545455 0 1,0 -2.5694990723562072,125.8792324365488A2.623030303030303,2.623030303030303 0 0,1 7.993605777301127e-15,128.50171644564358Z" style="fill: rgb(31, 119, 180); fill-opacity: 1; stroke: rgb(31, 119, 180);"></path></g><g class="vz-radial_progress-label-plot"><text class="vz-radial_progress-label" x="122.76666666666668" y="119.76666666666668" style="text-anchor: middle; fill: rgb(238, 238, 238); stroke-opacity: 0; font-size: 32.7879px;">80%</text></g></g></g></svg></div></div>
+    </div>
+</div>
+
+
+<script>
+    //Once the document is ready we set javascript and page settings
+    var screenWidth;
+    var screenHeight = 600;
+
+    $(document).ready(function () {
+
+        var rect;
+        if (self==top) {
+            rect = document.body.getBoundingClientRect();
+        }
+        else {
+            rect =  parent.document.body.getBoundingClientRect();
+        }
+
+        //Set display size based on window size.
+        screenWidth = (rect.width < 960) ? Math.round(rect.width*.95) : Math.round((rect.width - 210) *.95)
+
+        d3.select("#currentDisplay")
+                .attr("item_value", screenWidth + "," + screenHeight)
+                .attr("class", "selected")
+                .html("<a>" + screenWidth + "px - " + screenHeight + "px</a>");
+
+
+        $("#cssmenu").menumaker({
+            title: "VIZULY RADIAL PROGRESS",
+            format: "multitoggle"
+        });
+
+        // Set the size of our container element.
+        viz_container = d3.selectAll("#viz_container")
+                .style("width", screenWidth + "px")
+                .style("height", "600px");
+
+        initialize();
+
+
+    });
+
+</script>
+
+
+
+
+
+
+</body></html>

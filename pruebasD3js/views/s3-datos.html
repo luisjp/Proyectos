@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>D3 Test</title>
+    <style>
+      div.bar {
+        display: inline-block;
+        width: 20px;
+        height: 75px;   /* Esto se cambiará próximamente */
+        background-color: teal;
+        margin-right: 2px;
+      }
+    </style>
+    <script type="text/javascript" src="/d3/d3.v3.js"></script>
+</head>
+<body>
+    <script type="text/javascript">
+
+      var numeros_aleatorios = function()
+      {
+        var nums = [];
+        for (var i = 0; i < 25; i++) {
+          nums.push(Math.floor((Math.random() * 30) + 1));
+        }
+        return nums;
+      }
+
+      var dataset = numeros_aleatorios;
+      // d3.select("body").append("p").text("New paragraph!");
+
+      d3.select("body").selectAll("div")
+      .data(dataset)
+    	.enter()
+      .append("div")
+      .attr("class", "bar").style("height", function(d) {
+        var barHeight = d * 5;
+          return barHeight + "px";
+      });
+
+
+    </script>
+</body>
+</html>

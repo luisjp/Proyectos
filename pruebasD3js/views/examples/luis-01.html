@@ -1,0 +1,123 @@
+<!doctype html>
+<html class="no-js" lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pruebas D3js</title>
+    <script src="/scripts/jquery.js" language="JavaScript"></script>
+    <script src="/lib/d3/d3.v3.min.js" language="JavaScript"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/d3-tip/0.7.1/d3-tip.min.js" language="JavaScript"></script>
+    <script>
+      $(function()
+      {
+
+
+        $('input.radio').each(function() {
+
+          if (! $(this).is(":checked") ) {
+
+            $(this).parent().find("button.button").removeClass("enabled disabled").addClass("disabled")
+            $(this).parent().find("input[type='text']").removeClass("enabled disabled").addClass("disabled").attr("disabled","disabled")
+          }
+        });
+        $("input:checkbox").on('click', function() {
+          var $box = $(this);
+          if ($box.is(":checked")) {
+            // the name of the box is retrieved using the .attr() method
+            // as it is assumed and expected to be immutable
+            var group = "input:checkbox[name='" + $box.attr("name") + "']";
+
+            // the checked state of the group/box on the other hand will change
+            // and the current value is retrieved using .prop() method
+            $(group).prop("checked", false);
+            $(group).parent().parent().find("button.button").removeClass("enabled disabled").addClass("disabled")
+            $(group).parent().parent().find("input[type='text']").removeClass("enabled disabled").addClass("disabled").attr("disabled","disabled")
+            $box.prop("checked", true);
+
+             $box.parent().find("button.button").removeClass("enabled disabled").addClass("enabled")
+             $box.parent().find("input[type='text']").removeClass("enabled disabled").addClass("enabled").removeAttr("disabled");
+          } else {
+             $box.parent().find("button.button").removeClass("enabled disabled").addClass("disabled")
+             $box.parent().find("input[type='text']").removeClass("enabled disabled").addClass("disabled").attr("disabled","disabled")
+             $box.prop("checked", false);
+          }
+        });
+
+        $("#cargar_numeros").on('click', function()
+        {
+          var text =$(".textnumero").val().split(",") ;
+          $("svg").remove();
+          new linesd3js( text, ".blck:first-child").ejecutar();
+          new circlesd3js( text, ".blck:nth-child(2)").ejecutar();
+          new gauged3js( text, ".blck:nth-child(3)").ejecutar();
+        });
+        $("#cargar_json").on('click', function()
+        {
+          var url = $(".textjson").val();
+          $("svg").remove();
+          d3.json(url, function (error, data) {
+            if(error)
+             {
+               alert("El archivo no existe o esta defectuoso");
+               datos_por_defecto();
+               return console.error(error);
+
+             }
+              //code here JSON.parse( myjson )
+              var text= data["num"]
+              new linesd3js( text, ".blck:first-child").ejecutar();
+              new circlesd3js( text, ".blck:nth-child(2)").ejecutar();
+              new gauged3js( text, ".blck:nth-child(3)").ejecutar();
+          });
+        });
+      });
+    </script>
+    <link rel="stylesheet" href="/lib/foundationjs/css/foundation.css">
+    <link rel="stylesheet" href="/lib/foundationjs/css/app-01.css">
+    <link rel="stylesheet" href="/lib/foundationjs/css/styles.css">
+
+</head>
+<body>
+  <div class="grid-block small-up-3">
+    <div class="grid-block blck"></div>
+    <div class="grid-block blck"></div>
+    <div class="grid-block blck"></div>
+  </div>
+  <div class="column" style="background-color: #5f9ea0;">
+    <div class="board">
+
+        <div class="small-12 medium-6 grid-content" style="margin: 100px auto ;">
+          <label>
+            Datos (Separados por comas)
+            <span class="inline-label">
+              <input type="checkbox" class="radio" value="1" name="checks[]" />
+              <input type="text" class="textnumero" value="50,14,96,60,41,96,20" placeholder="Ej: 4,5,6,3,10...">
+              <button id="cargar_numeros" class="button">Cargar</button>
+            </span>
+          </label>
+          <label>
+            Url del JSON
+            <span class="inline-label">
+              <input type="checkbox" class="radio" value="1" name="checks[]" />
+              <input type="text" class="textjson" placeholder="Ej: http://www.webpage.com/datos.json">
+              <button id="cargar_json" class="button">Cargar</button>
+            </span>
+          </label>
+        </div>
+
+    </div>
+  </div>
+  <script type="text/javascript" src="/lib/d3/luis-01.js"></script>
+  <script>
+    datos_por_defecto();
+    function datos_por_defecto()
+    {
+      new linesd3js( [20,34,56,10,11,68,99], ".blck:first-child").ejecutar();
+      new circlesd3js( [50,14,96,60,41,96,20], ".blck:nth-child(2)").ejecutar();
+      new gauged3js( [50,14,96,60,41,96,20], ".blck:nth-child(3)").ejecutar();
+      new timelined3js([{label: "evento 1", data: [{ dia:8, mes:'enero', ano: 2016,horario:{hora:16, minuto:30}}]}], ".timeline").ejecutar();
+    }
+  </script>
+</body>
+</html>

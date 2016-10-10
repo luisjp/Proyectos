@@ -1,0 +1,12 @@
+.weather {
+  @extend %module;
+  @include transition(all 0.3s ease-out);
+  background: LightCyan;
+  &:hover {
+    background: DarkCyan;
+  }
+  &::before {
+    content: "";
+    display: block;
+  }
+}
